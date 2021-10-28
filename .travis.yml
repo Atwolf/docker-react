@@ -1,5 +1,6 @@
 language: generic
 sudo: required
+
 services:
   - docker
 
@@ -13,7 +14,7 @@ deploy:
   provider: elasticbeanstalk
   region: "us-east-2"
   app: "docker-create"
-  env: "dockercreate-env"
+  env: "Dockercreate-env"
   bucket_name: "elasticbeanstalk-us-east-2-319549390007"
   bucker_path: "docker-create"
   on:
