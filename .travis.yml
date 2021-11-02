@@ -1,5 +1,5 @@
-sudo: required
 language: generic
+sudo: required
 
 services:
   - docker
@@ -12,12 +12,12 @@ script:
 
 deploy:
   provider: elasticbeanstalk
-  region: 'us-east-2'
-  app: 'docker-create'
-  env: 'Dockercreate-env'
-  bucket_name: 'elasticbeanstalk-us-east-2-319549390007'
-  bucket_path: 'docker-create'
+  region: "us-east-2"
+  app: "docker-create"
+  env: "Dockercreate-env"
+  bucket_name: "elasticbeanstalk-us-east-2-319549390007"
+  bucket_path: "docker-create"
   on:
-    branch: main
+    branch: master
   access_key_id: $AWS_ACCESS_KEY
   secret_access_key: $AWS_SECRET_KEY

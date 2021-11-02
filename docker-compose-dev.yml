@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 version: '3'
 services:
   web:
@@ -21,3 +22,26 @@ services:
       - /app/node_modules
       - .:/app
     command: ['npm', 'run', 'test']
+=======
+version: '3'
+services: 
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    environment:
+        - CHOKIDAR_USEPOLLING=true
+    ports:
+      - "3000:3000"
+    volumes:
+      - /home/node/app/node_modules
+      - .:/home/node/app
+  tests:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+      - /home/node/app/node_modules
+      - .:/home/node/app
+    command: ["npm","run","test"]
+>>>>>>> b3183773088a3eded7557d438da9d92c81eac9ba
